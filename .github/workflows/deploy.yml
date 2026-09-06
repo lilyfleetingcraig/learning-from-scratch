@@ -1,32 +1,23 @@
 name: Deploy
-
 on:
   push:
     branches: ['main']
-
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: 'pages'
   cancel-in-progress: true
-
 jobs:
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      
+
     runs-on: ubuntu-latest
-    
-    defaults:
-      run:
-        working-directory: WebBlocks
-        
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,17 +26,24 @@ jobs:
         with:
           node-version: 26
           cache: npm
-          cache-dependency-path: WebBlocks/package-lock.json
+          cache-dependency-path: webblocks/package-lock.json
       - name: Install dependencies
+        working-directory: webblocks
         run: npm ci
       - name: Build
+        working-directory: webblocks
         run: npm run build
+      - name: Assemble site
+        run: |
+          mkdir -p _site/webblocks
+          cp index.html _site/
+          cp -r webblocks/dist/. _site/webblocks/
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: './WebBlocks/dist'
+          path: './_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
