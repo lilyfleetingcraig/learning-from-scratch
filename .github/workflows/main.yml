@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: WebBlocks
+        working-directory: webblocks
 
     steps:
       - name: Checkout repository
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 26
           cache: npm
-          cache-dependency-path: WebBlocks/package-lock.json
+          cache-dependency-path: webblocks/package-lock.json
 
       - name: Install dependencies
         run: npm ci
