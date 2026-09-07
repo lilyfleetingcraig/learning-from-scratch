@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: webblocks
+        working-directory: 
 
     steps:
       - name: Checkout repository
