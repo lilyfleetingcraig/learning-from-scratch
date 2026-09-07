@@ -18,8 +18,6 @@
   [![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)](#)
 </div>
 
-
-
 Web programming is considered an engaging entry point to learning to code, but it comes with its own set of challenges that can push away novices. Block-based programming is a popular solution to this problem, however no accessible system exists for young students. This project investigated the usability of WebBlocks, a new simpliﬁed block-based editor for HTML and CSS. It was found that participants reported signiﬁcantly higher perceptions of ease of web programming after use of the system, though there is room for improvements to be made to support usability for inexperienced users speciﬁcally.
 
 WebBlocks, a new block-based programming environment for web development languages, was produced to oﬀer an accessible and engaging entry point to coding. To be suitable as a ﬁrst exposure to programming under a spiral curriculum approach, the editor presents HTML and CSS code in a plain-English language. The system allows users to program HTML and CSS in separate environments, while viewing a live preview of their site and its rendered code.
@@ -38,6 +36,8 @@ This project has now been succeeded by web-block:
 ### 🎉 Reflection
 
 The biggest constraint on the development of this project was the limited time available. I would have loved to create a more comprehensive solution of the possible features discussed, as this could potentially oﬀer an engaging and widely accessible introduction to coding for children. Further, I would have liked to implement multiple abstraction layers over the language used as this could oﬀer novel contributions to the research community. I also would have been interested to see this system tested in classrooms in the real world, as this could evaluate its eﬀectiveness more reliably. If I was to ﬁnd myself again at the beginning of the project, I would have written a more extensible architecture for the language used in blocks, and their translations to code. I would use inheritance and implementations of interfaces to ensure that new abstraction layers could be seamlessly added without disruption to the overall structure of the system.
+
+---
 
 ## 📃 Dissertation
 
@@ -70,6 +70,8 @@ This chapter describes the process of an experimental evaluation of the new WebB
 ### 🎯 Conclusion
 
 This chapter provides an overview of the WebBlocks application which has been implemented over the course of the project, and key ﬁndings of its evaluation are revisited. Reﬂection is made on the progress of the development and the decisions made throughout, as well as areas which may have beneﬁted from a different approach. Lastly, suggestions for future work are given.
+
+---
 
 ## 💻 WebBlocks Code
 
